@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic page setup and metadata -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>General Store</title>
+
+  <!-- Google Fonts and external CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Header with store title and cart icon -->
+  <header>
+    <h1>🛍️ General Store</h1>
+    <div id="cart" onclick="toggleCart()">
+      <span>🛒</span>
+      <span id="cart-count">0</span>
+    </div>
+  </header>
+
+  <!-- Disclaimer message for visitors -->
+  <div class="disclaimer">
+    <p>This is not a functional store. It was created purely for fun and as a learning experience in web development. Enjoy exploring!</p>
+  </div>
+
+  <!-- Hidden cart panel that appears when cart is clicked -->
+  <div id="cart-panel" class="cart-panel hidden">
+    <h3>Your Cart</h3>
+    <ul id="cart-items"></ul>
+  </div>
+
+  <!-- Main product section -->
+  <main>
+    <section class="products">
+      <!-- Product card: EchoBuds -->
+      <div class="card color1">
+        <img src="assets/earpod.avif" alt="EchoBuds" />
+        <h2>EchoBuds</h2>
+        <p>Wireless earbuds with noise cancellation and deep bass.</p>
+        <button onclick="addToCart('EchoBuds')">Add to Cart</button>
+      </div>
+
+      <!-- Product card: BrewMaster 3000 -->
+      <div class="card color2">
+        <img src="assets/coffee-machine.avif" alt="BrewMaster 3000" />
+        <h2>BrewMaster 3000</h2>
+        <p>Smart coffee maker with programmable brew settings.</p>
+        <button onclick="addToCart('BrewMaster 3000')">Add to Cart</button>
+      </div>
+
+      <!-- Product card: TrailBlazer Backpack -->
+      <div class="card color3">
+        <img src="assets/backpack.avif" alt="TrailBlazer Backpack" />
+        <h2>TrailBlazer Backpack</h2>
+        <p>Durable, waterproof backpack for travel and hiking.</p>
+        <button onclick="addToCart('TrailBlazer Backpack')">Add to Cart</button>
+      </div>
+
+      <!-- Product card: GlowDesk Lamp -->
+      <div class="card color4">
+        <img src="assets/desklamp.avif" alt="GlowDesk Lamp" />
+        <h2>GlowDesk Lamp</h2>
+        <p>LED desk lamp with adjustable brightness and color modes.</p>
+        <button onclick="addToCart('GlowDesk Lamp')">Add to Cart</button>
+      </div>
+
+      <!-- Product SmartScale Pro -->
+      <div class="card color5">
+        <img src="assets/tracking.avif" alt="SmartScale Pro" />
+        <h2>SmartScale Pro</h2>
+        <p>Digital scale with body composition tracking and app sync.</p>
+        <button onclick="addToCart('SmartScale Pro')">Add to Cart</button>
+      </div>
+
+      <!-- Product Bottle -->
+      <div class="card color6">
+        <img src="assets/bottle.avif" alt="HydroMate Bottle" />
+        <h2>HydroMate Bottle</h2>
+        <p>Insulated water bottle that keeps drinks cold for 24 hours.</p>
+        <button onclick="addToCart('HydroMate Bottle')">Add to Cart</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer with YouTube link and store copyright -->
+  <footer>
+    <p>
+      <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0" target="_blank" rel="noopener noreferrer">
+        <img src="assets/youtube.webp" alt="YouTube" style="height: 32px; vertical-align: middle; margin-right: 8px;" />
+        YouTube
+      </a>
+    </p>
+    <p>2025 General Store</p>
+  </footer>
+
+  <!-- Modal popup for cart confirmation -->
+  <div id="popup-modal" class="modal hidden">
+    <div class="modal-content">
+      <h3>✅ Added to Cart</h3>
+      <p id="popup-message">Your item has been added.</p>
+      <button onclick="closeModal()">Close</button>
+    </div>
+  </div>
+
+  <!-- Link to external JavaScript file -->
+  <script src="js/script.js"></script>
+</body>
+</html>
