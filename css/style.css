@@ -30,6 +30,7 @@ header h1 {
   color: #222;
 }
 
+
 #cart {
   position: absolute;
   right: 2em;
@@ -94,11 +95,13 @@ main {
 }
 
 .products {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);   
   gap: 2em;
   padding: 2em;
+  max-width: 960px;
+  margin: 0 auto;
 }
 
 /* Product cards */
